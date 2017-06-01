@@ -20,20 +20,20 @@ public class Main {
 
         //zadanie1_1(); //komunikat, podaj stringa małe do upperCase
         //zadanie1_2(); //silnia na bigint multiply  substract
-        //zadanie1_3(); //Sumowanie nieparzystych 1 do n, n parzyste kończymy na n-1, n nieparzyste koniec na n
+        zadanie1_3(); //Sumowanie nieparzystych 1 do n, n parzyste kończymy na n-1, n nieparzyste koniec na n
         //System.out.println(zadanie1_4(123, 0)); // Konwerter Tryby 0- szesnastkowy, 1-binarny, 2-ósemkowy, zrealizowane metodami dla integer
         //zadanie2(); //klasa rational z działaniami, funkcja kwadratowa, wielomian, funkcja liniowa
         //zadanie3_1(); //niedomiar i przepełnienie
-        //zadanie3_2(); //ŹLE obsługa dzielenia przez zero i błednych wyrażeń
+        //zadanie3_2(); //obsługa dzielenia przez zero
         //zadanie4_1(); //edytor tekstu z różnym kodowaniem
         //zadanie4_2(); //kompresor i dekompresor
-        //zadanie5_1(); //ŹLE współrzędna i wypisanie kolejności leksykograficznie
+        //zadanie5_1(); //współrzędna i wypisanie kolejności od -1 do -nieskończoności i od 0 do nieskończoności
         //zadanie5_2(); //hashmap i współrzędne punktów
         //zadanie5_3();// graf przypisanie poziomu do tablicy
         //zadanie6_1(); //dorobienie wykrywanie cholera w sleep 10000 oknie
         //zadanie6_2(); // wątki komunikaty
         //zadanie7_1(args); //liczba sekund z serwera
-        // zadanie7_2 - klient serwer - saper - osobno, włączyć serwer, włączyć klienta.
+        //zadanie7_2 - klient serwer - saper - osobno, włączyć serwer, włączyć klienta.
     }
 
     static void zadanie1_1(){
@@ -103,7 +103,7 @@ public class Main {
 
     }
     static void zadanie3_2(){
-        Wyrazenie wyr = new Wyrazenie("(3*((1+2)-1))");
+        Wyrazenie wyr = new Wyrazenie("(3*((2/0)-1))");
         int wynik = wyr.oblicz();
         System.out.println(wynik);
     }
@@ -119,18 +119,19 @@ public class Main {
 
     }
     static void zadanie5_1(){
+        //inaczej niż w skrypcie - najpierw od -1 do nieskończoności, później od 0 do nieskończoności
+        // leksykograficznie
         TreeSet zbior = new TreeSet();
         zbior.add( new Wspolrzedna(2, 3) );
         zbior.add( new Wspolrzedna(-3, 0) );
         zbior.add( new Wspolrzedna(-1, 2) );
         zbior.add( new Wspolrzedna(-1, 2) );
         zbior.add( new Wspolrzedna(-3, -2) );
+        zbior.add( new Wspolrzedna(5, 2) );
         Iterator it = zbior.iterator();
         while (it.hasNext()){
             System.out.println((it.next()).toString());
         }
-        //Wyświetlona kolejność jest różna z tą podaną w skrypcie,
-        //jednak ze względu, iż miała być to kolejność leksykograficzna jest ona poprawna
     }
     static void zadanie5_2(){
         HashMap mapa = new HashMap();

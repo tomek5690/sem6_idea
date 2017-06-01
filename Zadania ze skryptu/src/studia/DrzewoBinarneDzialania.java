@@ -33,8 +33,13 @@ public class DrzewoBinarneDzialania {
                 case '-':
                     return lewy.wartosc() - prawy.wartosc();
                 case '/':
-                    //if (prawy.wartosc() == 0)
-                    return lewy.wartosc() / prawy.wartosc();
+                    int wynik = 1;
+                    try{
+                        wynik = lewy.wartosc() / prawy.wartosc();
+                    }catch (Exception e){
+                     System.out.println("Wyjątek:" + e);
+                    }
+                    return wynik;
                 case '*':
                     return lewy.wartosc() * prawy.wartosc();
             } return 0;
