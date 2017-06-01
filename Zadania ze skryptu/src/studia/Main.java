@@ -20,12 +20,12 @@ public class Main {
 
         //zadanie1_1(); //komunikat, podaj stringa małe do upperCase
         //zadanie1_2(); //silnia na bigint multiply  substract
-        zadanie1_3(); //Sumowanie nieparzystych 1 do n, n parzyste kończymy na n-1, n nieparzyste koniec na n
+        //zadanie1_3(); //Sumowanie nieparzystych 1 do n, n parzyste kończymy na n-1, n nieparzyste koniec na n
         //System.out.println(zadanie1_4(123, 0)); // Konwerter Tryby 0- szesnastkowy, 1-binarny, 2-ósemkowy, zrealizowane metodami dla integer
         //zadanie2(); //klasa rational z działaniami, funkcja kwadratowa, wielomian, funkcja liniowa
         //zadanie3_1(); //niedomiar i przepełnienie
         //zadanie3_2(); //obsługa dzielenia przez zero
-        //zadanie4_1(); //edytor tekstu z różnym kodowaniem
+        zadanie4_1(); //edytor tekstu z różnym kodowaniem
         //zadanie4_2(); //kompresor i dekompresor
         //zadanie5_1(); //współrzędna i wypisanie kolejności od -1 do -nieskończoności i od 0 do nieskończoności
         //zadanie5_2(); //hashmap i współrzędne punktów
